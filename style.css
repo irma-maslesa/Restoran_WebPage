@@ -1,0 +1,303 @@
+/* Opći stilovi */
+body {
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #333333;
+    color: #ffffff;
+    font-size: 1.1em;
+    line-height: 1.5;
+    text-align: center;
+    overflow-x: hidden;
+}
+
+img {
+    display: block;
+    width: 100%;
+    height: auto;
+}
+
+h1,
+h2,
+h3 {
+    margin: 0px;
+    padding: 1em 0;
+}
+
+p {
+    margin: 0;
+    padding: 1em 0;
+}
+
+.btn {
+    display: inline-block;
+    background: #333333;
+    color: #eaeaea;
+    text-decoration: none;
+    padding: 1em 2em;
+    border: 1px solid #666666;
+    margin: .5em 0;
+}
+
+.btn:hover {
+    background: #eaeaea;
+    color: #333333;
+}
+
+/* Header */
+
+#showcase {
+    min-height: 450px;
+}
+
+#showcase .bg-image {
+    position: absolute;
+    background: #333333 url('slike/pozadina.jpg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 100%;
+    height: 700px;
+    z-index: -1;
+    opacity: 0.4;
+}
+
+#showcase h1 {
+    padding-top: 100px;
+    padding-bottom: 0px;
+}
+
+#showcase .nav-wrap {
+    position: relative;
+    display: inline-block;
+}
+
+#showcase .menu {
+    width: 40px;
+    padding: 5px;
+}
+
+#showcase .navigation {
+    display: none;
+}
+
+#showcase .navigation ul {
+    list-style: none;
+    width: 130px;
+    position: absolute;
+    top: 30px;
+    left: -45px;
+    padding: 5px;
+    text-align: center;
+}
+
+#showcase .navigation li {
+    margin: 2px;
+    background: #333333;
+    border: 0.5px solid #666666;
+}
+
+#showcase .navigation a {
+    text-decoration: none;
+    color: #eaeaea;
+}
+
+#showcase .navigation li:hover {
+    background: #eaeaea;
+    color: #333333;
+}
+
+#showcase .navigation li:hover a {
+    color: #333333;
+}
+
+#showcase .content-wrap,
+#section-a .content-wrap {
+    padding: 0 1.5em;
+}
+
+/* Section A - Tekst o restoranu
+   Section D - Tekst o restoranu */
+
+#section-a,
+#section-d {
+    background: #eaeaea;
+    color: #333333;
+    padding-bottom: 2em;
+}
+
+/* Section B - Ponuda hrane
+   Section C - Ponuda pića */
+
+#section-b,
+#section-c {
+    padding: 2em 1em 1em;
+}
+
+#section-b ul,
+#section-c ul {
+    list-style: none;
+    margin: 0px;
+    padding: 0px;
+}
+
+#section-b li,
+#section-c li {
+    margin-bottom: 1em;
+    background: #eaeaea;
+    color: #333333;
+}
+
+.card-content {
+    padding: 1.5em;
+}
+
+/* Section E - Rezervacija*/
+
+#section-e {
+    padding-bottom: 2em;
+    color: #eaeaea;
+}
+
+#section-e label {
+    display: block;
+}
+
+#section-e input {
+    width: 210px;
+    border: 1px solid #666666;
+}
+
+/* Section F - Galerija + Info i o nama*/
+
+#section-f .slider {
+    background: #eaeaea;
+    padding: .5em;
+    min-width: 0px;
+}
+
+#section-f .box {
+    padding: 2em;
+    background: #333333;
+    color: #eaeaea;
+    overflow: hidden;
+}
+
+#section-f .box:last-child {
+    padding: 2em;
+    background: #eaeaea;
+    color: #333333;
+}
+
+/* Footer */
+
+#main-footer {
+    padding: 2em;
+    background: #333333;
+    color: #ffffff;
+    text-align: center;
+}
+
+
+
+/* Media Query */
+
+@media(min-width: 700px) {
+    .grid {
+        display: grid;
+        grid-template-columns: 1fr repeat(2, minmax(auto, 25em)) 1fr;
+    }
+
+    .content-wrap,
+    #section-b ul,
+    #section-c ul,
+    #section-f .slider {
+        grid-column: 2/4;
+    }
+
+    .box,
+    #main-footer div {
+        grid-column: span 2;
+    }
+
+    .menu {
+        display: none;
+    }
+
+    #showcase .bg-image {
+        height: 480px;
+    }
+
+    #showcase .navigation,
+    #showcase .nav-wrap,
+    #showcase .navigation li{
+        display: inline;
+        background: none;
+        border: none;
+    }
+
+    #showcase .navigation ul {
+        width: 700px;
+        position: absolute;
+        top: 0px;
+        left: -350px;
+    }
+
+    #showcase .navigation li {
+        padding: 20px;
+    }
+
+    #showcase .navigation li:hover,
+    #showcase .navigation li:hover a {
+        background: #333333;
+        color: #eaeaea;
+    }
+
+    #showcase .navigation li:hover {
+        border: 1px solid #666666;
+    }
+
+    /* Section A - Tekst o restoranu */
+    #section-a .content-text {
+        columns: 2;
+        column-gap: 2em;
+    }
+
+    /* Poravnava obje kolone */
+    #section-a .content-text p {
+        padding-top: 0px;
+    }
+
+    /* Section B - Ponuda hrane
+       Section C - Ponuda pića */
+    #section-b ul,
+    #section-c ul {
+        display: flex;
+        justify-content: space-around;
+    }
+
+    #section-b li,
+    #section-c li {
+        width: 33%;
+    }
+
+    /* Section E - Rezervacija */
+    #section-e label {
+        display: inline;
+    }
+
+    /* Section F - Galerija + Info i o nama */
+    #section-f {
+        background: #eaeaea;
+        color: #333333;
+    }
+
+    #section-f .box:last-child {
+        background: #333333;
+        color: #eaeaea;
+    }
+
+    #main-footer {
+        background: #ffffff;
+        color: #333333;
+    }
+}

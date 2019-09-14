@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="jquery/slick/slick.css" />
+    <link rel="stylesheet" type="text/css" href="jquery/slick/slick-theme.css" />
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <title></title>
+</head>
+
+<body>
+    <!-- Header -->
+    <header id="showcase" class="grid">
+        <div class="bg-image"></div>
+
+        <div class="content-wrap">
+
+            <!-- Navigacija -->
+            <div class="nav-wrap">
+                <img class="menu" src="slike/menu.png" alt="menu" onclick="otvoriMeni()">
+
+                <div class="navigation">
+                    <ul id="options">
+                        <li><a href="#section-b">Ponuda</a></li>
+                        <li><a href="#section-e">Rezervacija</a></li>
+                        <li><a href="#section-f">Galerija</a></li>
+                        <li><a href="#info">Kontakt</a></li>
+                    </ul>
+                </div>
+
+            </div>
+
+            <h1>Restoran Industriel</h1>
+            <p>Ako tražite ukusnu hranu pripremljenu s ljubavlju, na pravom ste mjestu.
+                Vama smo na usluzi u malom gastronomskom kutku u srcu Sarajeva.</p>
+            <a href="#section-b" class="btn">Ponuda</a>
+
+        </div>
+    </header>
+
+    <!-- Sections -->
+    <main id="main">
+
+        <section id="section-a" class="grid">
+            <div class="content-wrap">
+                <h1 id="content-title">Šta nas čini posebnim?</h1>
+                <div class="content-text">
+                    <p>Ono što nas čini posebnim je naša otvorena kuhinja koja pruža direktnu komunikaciju sa kuharom.
+                        Na ovaj način omogućavamo našim posjetiocima da zatraže nešto drugačije i da jelo bude potpuno
+                        po njihovoj volji.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Ponuda - hrana -->
+        <section id="section-b" class="grid">
+            <ul>
+                <li>
+                    <div class="card">
+                        <img src="slike/predjelo.jpg" alt="predjelo">
+                        <div class="card-content">
+                            <h3 class="card-title">Predjelo</h3>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nulla corrupti laudantium
+                                voluptates nihil cumque nisi nobis dolorem fuga repellat totam.</p>
+                        </div>
+                    </div>
+                </li>
+
+                <li>
+                    <div class="card">
+                        <img src="slike/glavno-jelo.jpg" alt="glavno-jelo">
+                        <div class="card-content">
+                            <h3 class="card-title">Glavno jelo</h3>
+                            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Maxime quo veniam neque
+                                similique incidunt adipisci inventore, impedit non et illum!</p>
+                        </div>
+                    </div>
+                </li>
+
+                <li>
+                    <div class="card">
+                        <img src="slike/desert.jpg" alt="desert">
+                        <div class="card-content">
+                            <h3 class="card-title">Desert</h3>
+                            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Natus dicta voluptates amet,
+                                repellat quibusdam neque est quo eveniet iusto voluptatum.</p>
+                        </div>
+                    </div>
+                </li>
+            </ul>
+        </section>
+
+        <!-- Ponuda - piće -->
+        <section id="section-c" class="grid">
+            <ul>
+                <li>
+                    <div class="card">
+                        <img src="slike/sok.jpg" alt="sokovi">
+                        <div class="card-content">
+                            <h3 class="card-title">Osvježavajuća pića</h3>
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Iure blanditiis temporibus illo
+                                repudiandae aliquid assumenda voluptatem nihil dolorum rem consequuntur.</p>
+                        </div>
+                    </div>
+                </li>
+
+                <li>
+                    <div class="card">
+                        <img src="slike/vino.jpg" alt="vina">
+                        <div class="card-content">
+                            <h3 class="card-title">Alkoholna pića</h3>
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Iure blanditiis temporibus illo
+                                repudiandae aliquid assumenda voluptatem nihil dolorum rem consequuntur.</p>
+                        </div>
+                    </div>
+                </li>
+
+                <li>
+                    <div class="card">
+                        <img src="slike/kafa.jpg" alt="kafe">
+                        <div class="card-content">
+                            <h3 class="card-title">Topli napitci</h3>
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Iure blanditiis temporibus illo
+                                repudiandae aliquid assumenda voluptatem nihil dolorum rem consequuntur.</p>
+                        </div>
+                    </div>
+                </li>
+            </ul>
+        </section>
+
+        <section id="section-d" class="grid">
+            <div class="content-wrap">
+                <h2 class="content-title">Gdje nas možete pronaći?</h2>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatibus minus vel odit! Voluptas ex
+                    repellendus, provident laudantium ipsum et possimus?</p>
+            </div>
+        </section>
+
+        <!-- Rezervacija -->
+        <section id="section-e" class="grid">
+            <div class="box">
+                <h2 class="content-title">Rezervacija</h2>
+
+                </br>
+                <form id="forma">
+                    <label>Ime</label>
+                    <input id="name" name="name" type="text" placeholder="Format Aa - minimalna duzina je 2"
+                        onblur="validirajIme(value)">
+                    </br>
+
+                    <label>Prezime</label>
+                    <input id="surname" name="surname" type="text" placeholder="Format Aa - minimalna duzina je 2"
+                        onblur="validirajPrezime(value)"> </br>
+
+                    <label>Kontakt telefon</label>
+                    <input id="contact" name="contact" type="text" placeholder="Format 06a/aaa-aaa"
+                        onblur="validirajKontakt(value)"> </br>
+
+                    <label>Broj osoba</label>
+                    <input id="person-number" name="pnumber" type="text" placeholder="Minimalno 1 - maksimalno 15"
+                        onblur="validirajBrojOsoba(value)"> </br>
+
+                    <label>Datum</label>
+                    <input id="date" name="date" type="text" placeholder="Format yyyy-mm-dd (sutra - 7 dana)"
+                        onblur="validirajDatum(value)"> </br>
+
+                    <label>Vrijeme</label>
+                    <input id="time" name="time" type="text" placeholder="Format hh:mm (09:00 - 21:00)"
+                        onblur="validirajVrijeme(value)"> </br> </br>
+
+                    <button id="submit" class="btn" type="button" onclick="zakaziRezervaciju()">Zakaži</button></br>
+                </form>
+
+            </div>
+
+            <div class="box">
+                <h2 class="content-title">Podaci o zakazanoj rezervaciji</h2>
+                <p id="info-place">Popunite formu i zakažite svoju rezervaciju.</p>
+            </div>
+        </section>
+
+        <section id="section-f" class="grid">
+
+            <!-- Galerija -->
+            <div class="slider">
+                <div><img src="slike/slider/kuhinja2.jpg" alt="kuhinja2"></div>
+                <div><img src="slike/slider/predjelo1.jpg" alt="predjelo1"></div>
+                <div><img src="slike/slider/ljudi2.jpg" alt="ljudi2"></div>
+                <div><img src="slike/slider/glavno-jelo1.jpg" alt="glavno-jelo1"></div>
+                <div><img src="slike/slider/desert2.jpg" alt="desert2"></div>
+                <div><img src="slike/slider/kuhinja1.jpg" alt="kuhinja1"></div>
+                <div><img src="slike/slider/glavno-jelo2.jpg" alt="glavno-jelo2"></div>
+                <div><img src="slike/slider/predjelo2.jpg" alt="predjelo2"></div>
+                <div><img src="slike/slider/ljudi1.jpg" alt="ljudi1"></div>
+                <div><img src="slike/slider/desert1.jpg" alt="desert1"></div>
+            </div>
+
+            <!-- Kontakt i info -->
+            <div class="box" id="info">
+                <h2 class="content-title">Kontakt</h2>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Obcaecati id eligendi illo ratione tenetur
+                    ipsum quos veritatis delectus nihil qui?</p>
+                <p>E-mail</p>
+            </div>
+
+            <div class="box">
+                <h2 class="content-title">O nama</h2>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Minima totam beatae ad labore non harum
+                    nesciunt ullam ipsa possimus amet dolor sapiente recusandae temporibus ut maiores incidunt numquam,
+                    id voluptates.</p>
+            </div>
+        </section>
+    </main>
+
+    <footer id="main-footer" class="grid">
+        <div>Dodatne informacije</div>
+        <div>Project by Irma Masleša</div>
+    </footer>
+
+
+    <script src="jquery/jquery-3.3.1.min.js"></script>
+    <script type="text/javascript" src="jquery/slick/slick.min.js"></script>
+    <script src="script.js"></script>
+</body>
+
+</html>
